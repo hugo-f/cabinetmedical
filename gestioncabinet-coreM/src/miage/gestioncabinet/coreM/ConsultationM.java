@@ -18,7 +18,6 @@ import miage.gestioncabinet.api.Traitement;
  */
 public class ConsultationM implements Consultation {
 
-	
 	/**
 	 * L'identifiant par défaut
 	 */
