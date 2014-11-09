@@ -10,15 +10,8 @@ import miage.gestioncabinet.api.Patient;
 import miage.gestioncabinet.api.Produit;
 import miage.gestioncabinet.api.Traitement;
 
-/**
- * 
- * @author Stephane Lopes
- * Représentation d'une consultation en mémoire
- *
- */
 public class ConsultationM implements Consultation {
 
-	
 	/**
 	 * L'identifiant par défaut
 	 */

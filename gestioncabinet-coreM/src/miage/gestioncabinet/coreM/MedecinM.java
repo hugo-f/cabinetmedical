@@ -4,9 +4,6 @@ import miage.gestioncabinet.api.Medecin;
 
 public class MedecinM implements Medecin {
 	
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = -2795187985951315891L;
 	private String RPPS;
 	private String nom;

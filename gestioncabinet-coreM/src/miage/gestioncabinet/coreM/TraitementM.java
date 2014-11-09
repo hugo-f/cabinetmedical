@@ -4,9 +4,7 @@ import miage.gestioncabinet.api.Produit;
 import miage.gestioncabinet.api.Traitement;
 
 public class TraitementM implements Traitement {
-	/**
-	 * L'identifiant serialisé
-	 */
+
 	private static final long serialVersionUID = -5516761953484876445L;
 
 	private Produit produit;
