@@ -20,8 +20,14 @@ public class PatientM extends PersonneM implements Patient {
 
 	@Override
 	public Integer getAge() {
-		//TODO !!!!!!!!!!!!!!!!!!!!!!!!!!!!! ->hugo le plus beau selon moi (sandrine) <3
-		return null;
+		
+		Calendar today = Calendar.getInstance();
+	    int diff = today.get(YEAR) - this.dateNaiss.get(YEAR);
+	    if (dateNaiss.get(MONTH) > today.get(MONTH) || 
+	        (dateNaiss.get(MONTH) == today.get(MONTH) && dateNaiss.get(DATE) > today.get(DATE))) {
+	        diff--;
+	    }
+	    return diff;
 	}
 
 }
