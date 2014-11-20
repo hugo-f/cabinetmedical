@@ -52,6 +52,9 @@ public class PlanningService implements PlanningRemoteService {
 	
 	@Override
 	public Calendar getDateDebut() {
+		if(this.dateDebut == null){
+			this.dateDebut = Calendar.getInstance();
+		}
 		return this.dateDebut;
 	}
 	
@@ -63,6 +66,9 @@ public class PlanningService implements PlanningRemoteService {
 	
 	@Override
 	public Calendar getDateFin() {
+		if(this.dateFin == null){
+			this.dateFin = Calendar.getInstance();
+		}
 		return this.dateFin;
 	}
 	
@@ -73,6 +79,9 @@ public class PlanningService implements PlanningRemoteService {
 	
 	@Override
 	public Medecin getMedecin() {
+		if(this.medecin == null){
+			this.medecin = new MedecinM();
+		}
 		return this.medecin;
 	}
 	@Override
@@ -100,12 +109,12 @@ public class PlanningService implements PlanningRemoteService {
 	}
 	@Override
 	public Consultation enregistrerRdv() throws GestionCabinetException {
-		this.listRDV.add(this.rdvCourant);
-		return this.rdvCourant;
+		this.listerRdv().add(this.getRdvCourant());
+		return this.getRdvCourant();
 	}
 	@Override
 	public void supprimerRdv() throws GestionCabinetException {
-		this.listRDV.remove(this.rdvCourant);
+		this.listerRdv().remove(this.getRdvCourant());
 	}
 	
 	

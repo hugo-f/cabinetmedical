@@ -21,9 +21,9 @@ public class PatientM extends PersonneM implements Patient {
 	@Override
 	public Integer getAge() {
 		Calendar today = Calendar.getInstance();
-	    int diff = today.get(YEAR) - this.dateNaiss.get(YEAR);
-	    if (dateNaiss.get(MONTH) > today.get(MONTH) || 
-	        (dateNaiss.get(MONTH) == today.get(MONTH) && dateNaiss.get(DATE) > today.get(DATE))) {
+	    int diff = today.get(Calendar.YEAR) - this.dateNaiss.get(Calendar.YEAR);
+	    if (dateNaiss.get(Calendar.MONTH) > today.get(Calendar.MONTH) || 
+	        (dateNaiss.get(Calendar.MONTH) == today.get(Calendar.MONTH) && dateNaiss.get(Calendar.DATE) > today.get(Calendar.DATE))) {
 	        diff--;
 	    }
 	    return diff;

@@ -50,8 +50,25 @@ public class ConsultationM implements Consultation {
 
 	@Override
 	public int compareTo(Consultation arg0) {
-		// TODO Auto-generated method stub
-		return 0;
+		Integer compare = this.getDebut().compareTo(arg0.getDebut());
+		if(compare.equals(0)){
+			compare = this.getFin().compareTo(arg0.getFin());
+		}
+		return compare;
+	}
+	
+	@Override
+	public boolean equals(Object arg0) {
+		//TODO Revoir le but du equals
+		Boolean equals = super.equals(arg0);
+		if(!equals){
+			if(arg0 instanceof Consultation){
+				Consultation consultation = (Consultation) arg0;
+				equals = this.getDebut().equals(consultation.getDebut());
+			}
+			
+		}
+		return true;
 	}
 
 	/**
@@ -60,6 +77,9 @@ public class ConsultationM implements Consultation {
 	 */
 	@Override
 	public Patient getPatient() {
+		if(this.patient == null){
+			this.patient = new PatientM();
+		}
 		return this.patient;
 	}
 
@@ -109,7 +129,6 @@ public class ConsultationM implements Consultation {
 	 */
 	@Override
 	public Calendar getFin() {
-		// TODO Auto-generated method stub
 		return this.fin;
 	}
 	

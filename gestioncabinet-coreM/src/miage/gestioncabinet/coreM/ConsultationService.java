@@ -48,8 +48,6 @@ public class ConsultationService implements ConsultationRemoteService{
 	public void analyserPrescription() throws GestionCabinetException {
 		this.consultation.getPrescription();
 		
-		// TO DO !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-		
 	}
 
 	@Override
