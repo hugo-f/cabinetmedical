@@ -99,12 +99,17 @@ public class PlanningService implements PlanningRemoteService {
 	@Override
 	public void setRdvCourant(Consultation rdv) {
 		this.rdvCourant = rdv;
-		
 	}
+	
 	@Override
 	public Consultation creerRdv(Calendar date) {
 		Consultation consultation = new ConsultationM();
 		consultation.setDebut(date);
+		
+		Calendar fin = (Calendar)date.clone();
+		fin.add(Calendar.MINUTE, 15);
+		consultation.setFin(fin);
+		
 		return consultation;
 	}
 	@Override

@@ -6,8 +6,9 @@ import miage.gestioncabinet.api.Patient;
 
 public class PatientM extends PersonneM implements Patient {
 
+	private static final long serialVersionUID = 1L;
 	private Calendar dateNaiss;
-
+	
 	@Override
 	public Calendar getDateNaissance() {
 		return this.dateNaiss;

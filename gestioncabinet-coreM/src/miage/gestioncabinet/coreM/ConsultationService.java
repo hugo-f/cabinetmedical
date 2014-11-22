@@ -60,5 +60,7 @@ public class ConsultationService implements ConsultationRemoteService{
 	public void supprimer() throws GestionCabinetException {
 		this.listConsultation.remove(this.consultation);
 	}
+	
+	
 
 }

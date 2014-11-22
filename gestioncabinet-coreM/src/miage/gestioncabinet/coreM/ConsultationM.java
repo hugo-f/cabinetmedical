@@ -78,7 +78,7 @@ public class ConsultationM implements Consultation {
 	@Override
 	public Patient getPatient() {
 		if(this.patient == null){
-			this.patient = new PatientM();
+			this.patient = new PatientM();	
 		}
 		return this.patient;
 	}
@@ -189,8 +189,13 @@ public class ConsultationM implements Consultation {
 
 	@Override
 	public void setInteractions(List<Interaction> interactions) {
-		this.interactions = interactions;
-		
+		this.interactions = interactions;	
 	}
-
+	
+	@Override
+	public String toString () {
+		String str = "RDV de " + patient.getNom() + " " + patient.getPrenom() + " le " + debut.get(Calendar.DAY_OF_MONTH)+"/"+debut.get(Calendar.MONTH)+"/"+debut.get(Calendar.YEAR);
+		return str;
+	}
+	
 }

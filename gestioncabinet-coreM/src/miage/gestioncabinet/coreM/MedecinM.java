@@ -43,6 +43,12 @@ public class MedecinM implements Medecin {
 	public String getRPPS() {
 		return this.RPPS;
 	}
+	
+	@Override
+	public String toString(){
+		String str = "NOM ::: " + this.nom + " PRENOM ::: " + this.prenom;
+		return str ;
+	}
 
 	
 }
